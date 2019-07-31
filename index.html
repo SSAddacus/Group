@@ -8,14 +8,14 @@
 <body>
         <div class= "container">
                 <div class="jumbotron">
-                <h1 class="display-4">Event's Near  Me!</h1>
-                <p class="lead">Find Sporting Event's, Concerts, Local Weather, and Much More Near You!</p>
+                <h1 class="display-4">Events Near  Me!</h1>
+                <p class="lead">Find Sporting Events, Concerts, Local Weather, and Much More Near You!</p>
                 <hr class="my-4">
-                <p>Click Below To Find Event's Near You!!</p>
+                <p>Click Below To Find Events Near You!!</p>
                 <div class ="row">
                     <div class="col-md-6 body">
                             <a href="https://www.ticketmaster.com/discover/sports/denver">
-                                    <img src="https://media.phillyvoice.com/media/images/19_081718_EaglesPublicPractice_Car.27c440e3.fill-735x409.jpg" alt="HTML tutorial" style="width:45%" style="height:45%">
+                                    <img src="https://cdn-s3.si.com/styles/marquee_large_2x/s3/images/fantasy-football-qb-rankings.jpg?itok=fM-u3vDl" alt="HTML tutorial" style="width:45%" style="height:45%">
                                   </a>  Sports                 
                                  </div>
                     <div class="col-md-6 body">
@@ -37,18 +37,20 @@
                                   </a>   Theater                                 
                         </div>
                     </div>
-                    </div>
+                    <br>
                     <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search Events" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" width=100%>Search Events</button>
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search Events" aria-label="Search"  id="event-search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" width=100%>Search Events</button>
+                      </form> <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search Dates" aria-label="Search" id="date-search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" width=100%>Search Dates</button>
                           </form> <form class="form-inline my-2 my-lg-0">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search Dates" aria-label="Search">
-                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" width=100%>Search Dates</button>
-                              </form> <form class="form-inline my-2 my-lg-0">
-                                    <input class="form-control mr-sm-2" type="search" placeholder="Search Location" aria-label="Search" width=100%>
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search Location</button>
-                                  </form>
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search Location" aria-label="Search" id="location-search" width=80%>
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search Location</button>
+                              </form>   
+                </div>
+                   
             </div>
-    <script src="logic.js"></script>
+    <script src="assets/javascript/app.js"></script>
 </body>
 </html>

@@ -1,4 +1,2 @@
 # Group
-
-
-Just read Me!
+App designed to show local events

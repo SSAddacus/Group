@@ -3,9 +3,16 @@
 <head>
     <title>Group Project</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel ="stylesheet" href="styles.css">
+    <link rel ="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+    <ul class="nav justify-content-left">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+        </li>
+        
+    </ul>
         <div class= "container">
                 <div class="jumbotron">
                 <h1 class="display-4">Event's Near  Me!</h1>
@@ -37,17 +44,30 @@
                                   </a>   Theater                                 
                         </div>
                     </div>
-                    </div>
-                    <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search Events" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" width=100%>Search Events</button>
-                          </form> <form class="form-inline my-2 my-lg-0">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search Dates" aria-label="Search">
-                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" width=100%>Search Dates</button>
-                              </form> <form class="form-inline my-2 my-lg-0">
-                                    <input class="form-control mr-sm-2" type="search" placeholder="Search Location" aria-label="Search" width=100%>
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search Location</button>
-                                  </form>
+                </div>
+                <div class="form"> 
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td scope="row">
+                                        <form class="form-inline my-2 my-lg-0">
+                                                <input class="form-control mr-sm-2" type="search" placeholder="Search Dates" aria-label="Search">
+                                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" width=100%>Search Dates</button>
+                                              </form>
+
+                                              <br><br>
+                                              <form class="form-inline my-2 my-lg-0">
+                                                    <input class="form-control mr-sm-2" type="search" placeholder="Search Location" aria-label="Search" width=100%>
+                                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search Location</button>
+                                    </form>
+                                </td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                </div>    
             </div>
     <script src="logic.js"></script>
 </body>

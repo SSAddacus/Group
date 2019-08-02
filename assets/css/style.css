@@ -1,0 +1,50 @@
+body {
+    
+    background: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    
+
+    
+    
+
+}
+
+.jumbotron {
+    text-align: center;
+    border: ridge;
+    border-width: 5px;
+    background: rgb(37, 34, 34);
+    border-color: bisque;
+    color: white;
+    padding: 15px;
+
+
+
+}
+
+.form-inline{
+    display: inline-block;
+    align-content: center;
+
+    
+}
+
+.btn {
+    color: white;
+    border-color: white;
+    background-color: black;
+}
+
+.nav {
+    color: white;
+    background: black;
+    margin-bottom: 40px;
+}
+
+.nav-link {
+    color: white;
+}
+

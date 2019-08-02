@@ -1,23 +1,52 @@
-.jumbotron{
-    background-image: url("https://dl1.cbsistatic.com/i/r/2018/08/09/b6ca69f8-f123-408c-9b1f-ea3f9cf1fb17/resize/620xauto/8787947d1d00135d3f2ed512e56bee72/concert-crowd.jpg");
+
+body {
+    
+    background: url("../images/background.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-position: center;
+    background-size: cover;
     text-align: center;
-    border:5px solid gold;
+    
+
+    
+    
 
 }
-.container {
-    position: relative;
+
+.jumbotron {
     text-align: center;
-    color: black;
-  
+    border: ridge;
+    border-width: 5px;
+    background: rgb(37, 34, 34);
+    border-color: bisque;
+    color: white;
+    padding: 15px;
+
+
+
 }
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: aqua;
-  }
-  
+
+.form-inline{
+    display: inline-block;
+    align-content: center;
+
+    
+}
+
+.btn {
+    color: white;
+    border-color: white;
+    background-color: black;
+}
+
+.nav {
+    color: white;
+    background: black;
+    margin-bottom: 40px;
+}
+
+.nav-link {
+    color: white;
+}
+
 

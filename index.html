@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Group Project</title>
+    <!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!-- Bootstrap Date-Picker Plugin -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel ="stylesheet" href="assets/style.css">
+</head>
+<ul class="nav justify-content-left">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+        </li>
+        
+    </ul>
+<body>
+        <div class= "container">
+                <div class="jumbotron">
+                <h1 class="display-4">Event's Near Me!</h1>
+                <p class="lead"></p>
+                <hr class="my-4">
+                <p>Click Below To Find Event's Near You!!</p>
+                <div class ="row">
+                    <div class="col-md-6 body">
+                            <a href="https://www.ticketmaster.com/discover/sports/denver">
+                                    <img src="https://media0.giphy.com/media/3o7TKOUyNwGFMlmTWU/200w.webp?cid=790b76115d438bf76e783765598dbd2e&rid=200w.webp" alt="HTML tutorial" style="width:45%" style="height:45%">
+                                    <div class="centered">Sports</div>
+
+                                </a>                  
+                                 </div>
+                    <div class="col-md-6 body">
+                            <a href="https://www.ticketmaster.com/discover/concerts">
+                                <img src="https://media0.giphy.com/media/GM8PrUsm92hRC/100.webp?cid=790b76115d438d86694a6f5a734b40f4&rid=100.webp" alt="HTML tutorial" style="width:45%" style="height:45%">
+                                <div class="centered">Concerts</div>
+                            </a>                  
+                    </div>
+                </div>
+                <br>
+                <div class ="row">
+                        <div class="col-md-6 body">
+                                <a href="https://www.google.com/search?q=local+weather&oq=local+weather&aqs=chrome..69i57j0l5.2187j1j7&sourceid=chrome&ie=UTF-8">
+                                    <img src="https://media1.giphy.com/media/T9VKxJJvtw4Cc/200w.webp?cid=790b76115d438c70704c5a596ffb21c5&rid=200w.webp" alt="HTML tutorial" style="width:45%" style="height:45%">
+                                    <div class="centered">Weather</div>
+
+                                </a>     
+                                                 </div>
+                        <div class="col-md-6 body">
+                                <a href="https://www.google.com/search?q=food&oq=food+&aqs=chrome..69i57j35i39l2j0l3.3099j0j7&sourceid=chrome&ie=UTF-8">
+                                    <img src="https://media0.giphy.com/media/1zkrF3l0RfgapqdySj/200.webp?cid=790b76115d438e0254575648321398e4&rid=200.webp" alt="HTML tutorial" style="width:45%" style="height:45%">
+                                    <div class="centered">Food</div>
+
+                                </a>                                
+                        </div>
+                    </div>
+                    </div>
+                    <form class="form-inline my-2 my-lg-0">
+                          </form> <div class="bootstrap-iso">
+                                <div class="container-fluid">
+                                 <div class="row">
+                                  <div class="col-md-6 col-sm-6 col-xs-12">
+                               
+                                   <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">
+                                                        <form class="form-inline my-2 my-lg-0">
+                                                                    <form method="post">
+                                                                            <div class="form-group"> <!-- Date input -->
+                                                                              <label class="control-label" for="date"></label>
+                                                                              <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                                                                            </div>
+                                                                            <div class="form-group"> <!-- Submit button -->
+                                                                               <button class="btn btn-primary " name="submit" type="submit" value="search">Submit</button>
+                                                                             </div>
+                                                          </form>
+                ​
+                                                              <br><br>
+                                                              <form class="form-inline my-2 my-lg-0">
+                                                                    <input class="form-control mr-sm-2" type="search" placeholder="Search Location" aria-label="Search" width=100% id="locationInput">
+                                                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchCity">Search Location</button>
+                                                    </form>
+                                            </tr>
+                                 </tbody>
+                                    </table>
+                                    
+                                </div>    
+                            </div>
+            </div>
+            <div id="json-view"></div>
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>

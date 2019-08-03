@@ -20,6 +20,7 @@ body {
     border-color: bisque;
     color: white;
     padding: 15px;
+    font-family: 'Roboto Condensed', sans-serif;
 
 
 
@@ -47,4 +48,6 @@ body {
 .nav-link {
     color: white;
 }
+
+
 

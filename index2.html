@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <title>Group Project</title>
+     <!-- //JQuery -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+     <!-- //Moment.js Reference -->
+      <script src=“https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js“></script>  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel ="stylesheet" href="assets/css/style.css">
 </head>
@@ -82,11 +87,11 @@
 
                                               <br><br>
                                               <form class="form-inline my-2 my-lg-0">
-                                                    <input class="form-control mr-sm-2" type="search" placeholder="Search Location" aria-label="Search" width=100%>
-                                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search Location</button>
+                                                <input class="form-control mr-sm-2" type="search" placeholder="Search Location" aria-label="Search" width=100% id="searchLocation">
+                                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchCity">Search Location</button>
                                     </form>
                                 </td>
-                                
+                                <h1 class="display-4"> Search Events Near You!</h1>
                             </tr>
                             
                         </tbody>
@@ -94,11 +99,10 @@
                     
                 </div>    
             </div>
-    <script src="assets/javascript/app.js"></script>
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
+            <div id="json-view"></div>
+
+            <!-- js -->
+            <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>

@@ -85,6 +85,24 @@ $(document).on("click",'#searchCity',searchCity);
 //
  //\ in CSSFilter by event type//Filter by what is inviovled in event//API needs to accept relevant queries//Make use of postman//Set limit for what is shown on page//sCan use sol.ifire modals from sweetalertswa//lLl
 
+// start date picker 
+ $('#startdatepicker').datepicker({
+  weekStart: 1,
+  daysOfWeekHighlighted: "6,0",
+  autoclose: true,
+  todayHighlight: true,
+});
+$('#startdatepicker').datepicker("setDate", new Date());
+
+//end datre picker
+$('#enddatepicker').datepicker({
+  weekStart: 1,
+  daysOfWeekHighlighted: "6,0",
+  autoclose: true,
+  todayHighlight: true,
+});
+$('#enddatepicker').datepicker("setDate", new Date());
+
 
 
 

@@ -8,7 +8,32 @@
      <!-- //Moment.js Reference -->
       <script src=“https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js“></script>  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- google api -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!-- stylesheet -->
     <link rel ="stylesheet" href="assets/css/style.css">
+
+    <!-- date picker -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script type="text/javascript">
+    //    startdate
+       $('#startdatepicker').datepicker({
+            weekStart: 1,
+            daysOfWeekHighlighted: "6,0",
+            autoclose: true,
+            todayHighlight: true,
+        });
+        $('#startdatepicker').datepicker("setDate", new Date());
+        // enddate
+        $('#enddatepicker').datepicker({
+            weekStart: 1,
+            daysOfWeekHighlighted: "6,0",
+            autoclose: true,
+            todayHighlight: true,
+        });
+        $('#enddatepicker').datepicker("setDate", new Date());
+    </script>
 </head>
 <body>
 
@@ -69,6 +94,22 @@
                                            <div class="bootstrap-iso">
                                            <form method="post">
                                              <div class="form-inline my-2my-lg-0"> <!-- Date input -->
+                                                <!-- start date -->
+                                                <main class="container">
+                                                    <div class="row" style="padding-top: 100px">
+                                                        <div class="col">
+                                                            <input data-date-format="dd/mm/yyyy" id="startdatepicker">
+                                                        </div>
+                                                    </div>
+                                                </main>
+                                                <!-- end date -->
+                                                <main class="container">
+                                                    <div class="row" style="padding-top: 100px">
+                                                        <div class="col">
+                                                            <input data-date-format="dd/mm/yyyy" id="enddatepicker">
+                                                        </div>
+                                                    </div>
+                                                </main>
                                                <input class="form-control" id="date" name="begin-date" placeholder="Start Date" type="text"/>
                                                <input class="form-control" id="date" name="end-date" placeholder="End Date" type="text"/>
 
@@ -99,6 +140,12 @@
                     
                 </div>    
             </div>
+
+            <p id="location">location there</p>
+    <div id="map"></div>
+    <div id="events"></div>
+   
+    <script src="https://maps.googleapis.com/maps/api/js" async defer></script>
             <div id="json-view"></div>
 
             <!-- js -->

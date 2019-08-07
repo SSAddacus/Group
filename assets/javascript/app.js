@@ -2,26 +2,14 @@
 // document.getElementById("myBtn").addEventListener("click", displayDate);
 // window.location.href = "file:///C:/Users/willi/Desktop/group-project/Group/index.html#";
 
-// Need to create a onclick for when the city is entered
- //on click for search button needs to be 
-// $("#searchCity").onclick("click") (function(){
+//  googlemaps  
+var globalIdgaf={
+  coords:{
+    latitude:39.68,
+    longitude:-104.96
+  }
+}
 
-//   event.preventDefault();
-//   var city = $(this).attr("#searchLocation").val();
-//   // var startDate = $
-//   // var endDate = 
-//   // var keyword = 
-//   // var geoTag = 
-//   var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?size=10&apikey=SOJLbFaWeEAeY6IXqBXhcCHomLO71BHF&city=" + city + "&startDateTime=" + startDate +"&endDateTime=" + endDate +"&keyword="+ keyword
-
-//   $.ajax({
-//    url: queryURL,
-//    method: "GET"
-//   }).then(function(response){
-//    $("#json-view").text(JSON.stringify(response))
-//   });
-
-//  googlemaps   
 function getLocation() {
   if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -29,32 +17,51 @@ function getLocation() {
       var x = document.getElementById("location");
       x.innerHTML = "Geolocation is not supported by this browser.";
   }
+  console.log(navigator.geolocation)
 }
-function showPosition(position) {
+function showPosition(position=globalIdgaf) {
   var x = document.getElementById("location");
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude; 
   var latlon = position.coords.latitude + "," + position.coords.longitude;
-
+  // console.log(position.coords)
 
   $.ajax({
     type:"GET",
-    url:"https://app.ticketmaster.com/discovery/v2/events.json?apikey=O4ZKxAFY8EOCdyuM8hx8sWLZSF8gkBHF&latlong="+latlon,
+    url:"https://app.ticketmaster.com/discovery/v2/events.json?size=10&apikey=O4ZKxAFY8EOCdyuM8hx8sWLZSF8gkBHF&latlong="+latlon,
     async:true,
     dataType: "json",
     success: function(json) {
                 console.log(json);
+
                 var e = document.getElementById("events");
+                // e.innerHTML = json.page.totalElements + " events found.";
                 e.innerHTML = json.page.totalElements + " events found.";
                 showEvents(json);
+                console.log(position)
                 initMap(position, json);
              },
     error: function(xhr, status, err) {
                 console.log(err);
              }
   });
-
-}
+  // $.ajax({
+  //   type:"GET",
+  //   url:"https://maps.googleapis.com/maps/api/js?key=AIzaSyAL7oHHjQCXhpWvTqCS89EQbOrjBkIE_5M&callback=initMap"+latlon,
+  //   async:true,
+  //   dataType: "json",
+  //   success: function(json) {
+  //               console.log(json);
+  //               var e = document.getElementById("events");
+  //               e.innerHTML = json.page.totalElements + " events found.";
+  //               showEvents(json);
+  //               initMap(position, json);
+  //            },
+  //   error: function(xhr, status, err) {
+  //               console.log(err);
+  //            }
+  // });
+};
 
 function showError(error) {
   switch(error.code) {
@@ -75,22 +82,25 @@ function showError(error) {
 
 
 function showEvents(json) {
-for(var i=0; i<json.page.size; i++) {
+for(var i=0; i<10; i++) {
   $("#events").append("<p>"+json._embedded.events[i].name+"</p>");
 }
 }
+// json.page.size
 
-
-function initMap(position, json) {
+function initMap(position=globalIdgaf, json) {
 var mapDiv = document.getElementById('map');
+console.log(position)
+
 var map = new google.maps.Map(mapDiv, {
   center: {lat: position.coords.latitude, lng: position.coords.longitude},
   zoom: 10
 });
-for(var i=0; i<json.page.size; i++) {
+for(var i=0; i<10; i++) {
   addMarker(map, json._embedded.events[i]);
 }
 }
+// json.page.size
 
 function addMarker(map, event) {
 var marker = new google.maps.Marker({
@@ -104,10 +114,12 @@ console.log(marker);
 
 
 
+//Fuction for JSON starts-->soon to append info on HTML
 getLocation();
+
 // });
 //functions need to be created for when a city is entered, events from multiple API's need to populate to its designated page. need to come up with a limit of how many events will be displayed. on click to be at the end.
-var cities = ["Denver", "Austin", "seattle", "Dallas"];
+var cities = ["Denver", "Austin", "Seattle", "Dallas"];
 //Fuction to be Used Later
 function searchCity (){
 
@@ -124,7 +136,25 @@ $.ajax({
 }).then(function(response){
    $("#json-view").text(JSON.stringify(response))
 });
-console.log(stringify(response));
+// console.log(stringify(response));
+for(var i =0; i<_embedded.events.length; i++){
+var eventName = _embedded.events[i].name
+console.log(eventName);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
@@ -155,9 +185,6 @@ renderButtons();
 
 });
 
-
-
-
 $(document).on("click",'#searchCity',searchCity);
 
 //need to take data from specfic API and make it a JSON and push to specifc  item
@@ -185,10 +212,6 @@ $('#enddatepicker').datepicker({
   todayHighlight: true,
 });
 $('#enddatepicker').datepicker("setDate", new Date());
-
-
-
-
 
     // For Date Bar
    $(document).ready(function(){

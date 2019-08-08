@@ -137,9 +137,64 @@
             <p id="location">location there</p>
     <div id="map"></div>
     <div id="events"></div>
-   
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkC-kfJo-TDey6dpHMAnPgvDNob3t6Uyk&callback=initMap" async defer></script>
+<!-- // -->
+<div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+      <div id='events-panel' class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Events</h3>
+        </div>
+        <div class="panel-body">
+          <div id="events" class="list-group">
+            <a href="#" class="list-group-item">
+              <h4 class="list-group-item-heading">Event title</h4>
+              <p class="list-group-item-text"></p>
+              <p class="venue"></p>
+            </a>
+            <a href="#" class="list-group-item">
+              <h4 class="list-group-item-heading">Event title</h4>
+              <p class="list-group-item-text"></p>
+              <p class="venue"></p>
+            </a>
+            <a href="#" class="list-group-item">
+              <h4 class="list-group-item-heading">Event title</h4>
+              <p class="list-group-item-text"></p>
+              <p class="venue"></p>
+            </a>
+            <a href="#" class="list-group-item">
+              <h4 class="list-group-item-heading">Event title</h4>
+              <p class="list-group-item-text"></p>
+              <p class="venue"></p>
+            </a>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <nav>
+            <ul class="pager">
+              <li id="prev" class="previous"><a href="#"><span aria-hidden="true">&larr;</span></a></li>
+              <li id="next" class="next"><a href="#"><span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+      <div id='attraction-panel' class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Attraction</h3>
+        </div>
+        <div id="attraction" class="panel-body">
+          <h4 class="list-group-item-heading">Attraction title</h4>
+          <img class="col-xs-12" src="">
+          <p id="classification"></p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+<!-- // -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD6GnKYXx_3svtnxPl8dEuWn4RgczptEE&callback=initMap" async defer></script>
 
             <div id="json-view"></div>
 
